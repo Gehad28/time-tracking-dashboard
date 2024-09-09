@@ -36,7 +36,7 @@ h1, h2{
 
 .container{
     margin: auto;
-    max-width: 75%;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
@@ -182,4 +182,93 @@ footer{
     bottom: 0;
     position: fixed;
     width: 100%;
+}
+
+@media (max-width: 1145px){
+    .container{
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 380px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .card{
+        gap: 0.5rem;
+    }
+
+    .card .time{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card h2{
+        font-size: 1.8em;
+    }
+
+    .card .time p, .profile-card p{
+        font-size: 0.9em;
+    }
+
+    .top{
+        background-position: 90% 150%;
+        background-size: 25%;
+    }
+    
+    .forth{
+        background-position: 90% 0;
+    }
+    
+    .fifth{
+        background-position: 90% 40%;
+    }
+    
+    .last{
+        background-position: 90% -60%;
+        background-size: 20%;
+    }
+
+    .main-card{
+        display: block;
+    }
+
+    .profile-card{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .profile-card img{
+        max-width: 20%;
+    }
+
+    h1{
+        font-size: 1.4em;
+    }
+
+    .navigation-card{
+        padding: 1.5rem;
+        padding-top: 2.5rem;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul li{
+        margin-bottom: 0;
+    }
+
+    footer{
+        position: relative;
+    }
 }
