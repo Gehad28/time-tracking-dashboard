@@ -8,7 +8,7 @@ let currentTimes = document.querySelectorAll(".current");
 let previousTimes = document.querySelectorAll(".previous");
 let listItems = document.querySelectorAll("li");
 
-// let data = [];
+let data = [];
 
 const perviousText = {
     "daily": "Yasterday",
@@ -16,28 +16,28 @@ const perviousText = {
     "monthly": "Last Month"
 }
 
-// fetch("/data.json").then((request) => {
-//     if(!request.ok){
-//         console.log("Failed to fetch data!");
-//         return null;
-//     }
+fetch("/data.json").then((request) => {
+    if(!request.ok){
+        console.log("Failed to fetch data!");
+        return null;
+    }
 
-//     return request.json();
-// }).then((fetchedData) => {
-//     console.log(fetchedData);
-//     fetchedData.forEach((item, index) => {
-//         titles[index].innerHTML = item.title;
-//         currentTimes[index].innerHTML = `${item.timeframes.weekly.current}hrs`;
-//         previousTimes[index].innerHTML = `Last Week - ${item.timeframes.weekly.previous}hrs`;
-//     });
-//     data = fetchedData;
-// });
-
-data.forEach((item, index) => {
-    titles[index].innerHTML = item.title;
-    currentTimes[index].innerHTML = `${item.timeframes.weekly.current}hrs`;
-    previousTimes[index].innerHTML = `Last Week - ${item.timeframes.weekly.previous}hrs`;
+    return request.json();
+}).then((fetchedData) => {
+    console.log(fetchedData);
+    fetchedData.forEach((item, index) => {
+        titles[index].innerHTML = item.title;
+        currentTimes[index].innerHTML = `${item.timeframes.weekly.current}hrs`;
+        previousTimes[index].innerHTML = `Last Week - ${item.timeframes.weekly.previous}hrs`;
+    });
+    data = fetchedData;
 });
+
+// data.forEach((item, index) => {
+//     titles[index].innerHTML = item.title;
+//     currentTimes[index].innerHTML = `${item.timeframes.weekly.current}hrs`;
+//     previousTimes[index].innerHTML = `Last Week - ${item.timeframes.weekly.previous}hrs`;
+// });
 
 const update = (timeframe) => {
     data.forEach((item, index) => {
