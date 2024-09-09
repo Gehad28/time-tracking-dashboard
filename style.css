@@ -202,7 +202,8 @@ footer{
         flex-direction: column;
         gap: 2rem;
         padding: 1rem;
-        margin-top: 2rem;
+        position: absolute;
+        top: 0;
     }
 
     .card{
@@ -274,8 +275,4 @@ footer{
     ul li{
         margin-bottom: 0;
     }
-
-    /* footer{
-        position: relative;
-    } */
 }
