@@ -137,6 +137,7 @@ h1, h2{
     max-width: 40%;
     border: 2px solid white;
     border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
 .navigation-card{
