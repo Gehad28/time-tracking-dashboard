@@ -16,7 +16,7 @@ const perviousText = {
     "monthly": "Last Month"
 }
 
-fetch("/data.json").then((request) => {
+fetch("data.json").then((request) => {
     if(!request.ok){
         console.log("Failed to fetch data!");
         return null;
