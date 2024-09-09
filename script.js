@@ -1,6 +1,3 @@
-// import data from './data.json' assert { type: 'json' };
-
-
 let container = document.getElementById("container");
 
 let titles = document.querySelectorAll(".title");
@@ -32,12 +29,6 @@ fetch("data.json").then((request) => {
     });
     data = fetchedData;
 });
-
-// data.forEach((item, index) => {
-//     titles[index].innerHTML = item.title;
-//     currentTimes[index].innerHTML = `${item.timeframes.weekly.current}hrs`;
-//     previousTimes[index].innerHTML = `Last Week - ${item.timeframes.weekly.previous}hrs`;
-// });
 
 const update = (timeframe) => {
     data.forEach((item, index) => {
